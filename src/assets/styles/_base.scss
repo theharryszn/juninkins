@@ -1,0 +1,31 @@
+@import "breakpoints";
+@import "fonts";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Resets
+* {
+  box-sizing: border-box;
+  font-family: "Eina", sans-serif;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+
+  @include media("<=1200px") {
+    font-size: 12px;
+  }
+}
